@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: #242525;
+}
+
+.cursor {
+  position: fixed;
+  padding: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: 0.5s ease-out;
+  z-index: 3000;
+}
+
+/*# sourceMappingURL=style.css.map */
