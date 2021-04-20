@@ -21,11 +21,10 @@
     <?php include "./includes/nav.php" ?>
 
     <header class="header">
-        <div class="container">
-            <img src="./img/logo-white.png" alt="logo">
-        </div>
+        <div class="container"></div>
     </header>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

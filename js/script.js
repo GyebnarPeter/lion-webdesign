@@ -21,6 +21,19 @@ hoverEffectItems.forEach(e => e.addEventListener("mouseout", () => {
 
 // Navigation
 const navBtn = document.querySelector(".nav-btn");
+const nav = document.querySelector(".nav");
+const navList = document.querySelector(".nav__list");
+
 navBtn.onclick = () => {
-    console.log("klikk");
-};
+    nav.classList.contains("nav-toggle")
+        ? nav.classList.remove("nav-toggle")
+        : nav.classList.add("nav-toggle");
+        
+    setTimeout(navListFade, 1000);
+}
+
+let navListFade = () => {
+    navList.classList.contains("navfade")
+        ? navList.classList.remove("navfade")
+        : navList.classList.add("navfade");
+}

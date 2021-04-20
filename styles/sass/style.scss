@@ -29,16 +29,21 @@
 
 .nav {
     position: fixed;
-    top: 0;
+    top: -100vh;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: modules.$gray;
+    //background: modules.$gray;
+    background: rgb(87,86,86);
+    background: linear-gradient(148deg, rgba(87,86,86,1) 0%, rgba(59,59,62,1) 4%, rgba(45,45,50,1) 9%, rgba(26,26,26,1) 20%, rgba(26,26,26,1) 100%);
+    transition: 1s;
+    overflow: hidden;
 
     &__logo {
         img {
             width: 200px;
-            margin-bottom: 20%;
+            margin: 50px 0;
+            transform: translate(-100px);
         }
     }
 
@@ -49,6 +54,7 @@
         flex-direction: column;
         padding: 0 50px;
         border-left: 2px solid modules.$lightgrey;
+        opacity: 0;
     }
 
     &__link {
@@ -59,18 +65,37 @@
         letter-spacing: 2px;
         display: block;
         transition: .5s;
-        color: transparent;
-        -webkit-text-stroke: .5px modules.$white;
-        -webkit-font-smoothing: antialiased;
+        //color: transparent;
+        //-webkit-text-stroke: .5px modules.$white;
+        //-webkit-font-smoothing: antialiased;
+        color: white;
 
-        &:hover {
-            color: white;
-        }
+        //&:hover {
+            //color: white;
+            //color: transparent;
+            //-webkit-text-stroke: .5px modules.$white;
+            //-webkit-font-smoothing: antialiased;
+        //}
     }
 
     .container__left-column {
         border-left: none;
     }
+}
+
+.nav-toggle {
+    top: 0;
+}
+
+@keyframes navfade {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+}
+
+.navfade {
+    animation-name: navfade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .header {
