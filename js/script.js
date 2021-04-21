@@ -37,3 +37,11 @@ let navListFade = () => {
         ? navList.classList.remove("navfade")
         : navList.classList.add("navfade");
 }
+
+// Detect device
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    cursor.style.display = "none";
+}
+
+let is_safari = navigator.userAgent.indexOf("Safari") > -1;
+if (is_safari) { cursor.style.display = "none"; }

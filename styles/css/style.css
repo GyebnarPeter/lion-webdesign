@@ -20,6 +20,11 @@ body {
   z-index: 1;
 }
 
+@media screen and (max-width: 1200px) {
+  .cursor {
+    display: none;
+  }
+}
 .cursor-hover {
   background: #ffffff;
   transform: scale(2);
@@ -105,8 +110,7 @@ body {
 }
 .nav__logo img {
   width: 200px;
-  margin: 50px 0;
-  transform: translate(-100px);
+  margin: 50px;
 }
 .nav__list {
   height: 100%;
@@ -120,7 +124,7 @@ body {
 .nav__link {
   text-decoration: none;
   margin: 10px 0;
-  font-size: 2.5em;
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: 900;
   letter-spacing: 2px;
   display: block;
@@ -128,6 +132,7 @@ body {
   color: white;
 }
 .nav .container__left-column {
+  position: relative;
   border-left: none;
 }
 
@@ -149,6 +154,42 @@ body {
   animation-fill-mode: forwards;
 }
 
+@media screen and (max-width: 992px) {
+  .nav__container-right-column {
+    display: none;
+  }
+  .nav__container-left-column {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1) !important;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  .nav__logo img {
+    transform: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+  }
+  .nav__list {
+    height: initial;
+    border: none;
+  }
+  .nav__item {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav__logo img {
+    width: 70px;
+  }
+}
+/* HEADER */
 .header {
   width: 100%;
   height: 100vh;

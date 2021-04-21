@@ -23,6 +23,9 @@ body {
     z-index: 1;
 }
 
+@media screen and (max-width: 1200px) {
+    .cursor { display: none; }}
+
 .cursor-hover {
     background: colors.$white;
     transform: scale(2);

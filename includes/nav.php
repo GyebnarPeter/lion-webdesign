@@ -6,7 +6,7 @@
 
 <nav class="nav">
     <div class="nav__container container">
-        <div class="container__left-column">
+        <div class="nav__container-left-column container__left-column">
             <div class="nav__logo hover-effect">
                 <a href="index.php"><img src="./img/logo-white.png" alt="logo"></a>
             </div>
@@ -37,7 +37,7 @@
                 </li>
             </ul>
         </div>
-        <div class="container__right-column">
+        <div class="nav__container-right-column container__right-column">
             <img class="levitation" src="./img/shape.webp" alt="shape">
         </div>
     </div>

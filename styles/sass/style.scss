@@ -1,7 +1,6 @@
 @use "modules/modules.scss";
 
 /* NAVIGATION */
-
 .nav-btn {
     width: 60px;
     height: 30px;
@@ -33,7 +32,6 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    //background: modules.$gray;
     background: rgb(87,86,86);
     background: linear-gradient(148deg, rgba(87,86,86,1) 0%, rgba(59,59,62,1) 4%, rgba(45,45,50,1) 9%, rgba(26,26,26,1) 20%, rgba(26,26,26,1) 100%);
     transition: 1s;
@@ -42,8 +40,7 @@
     &__logo {
         img {
             width: 200px;
-            margin: 50px 0;
-            transform: translate(-100px);
+            margin: 50px;
         }
     }
 
@@ -60,25 +57,16 @@
     &__link {
         text-decoration: none;
         margin: 10px 0;
-        font-size: 2.5em;
+        font-size: clamp(1rem, 2.5vw, 2rem);
         font-weight: 900;
         letter-spacing: 2px;
         display: block;
         transition: .5s;
-        //color: transparent;
-        //-webkit-text-stroke: .5px modules.$white;
-        //-webkit-font-smoothing: antialiased;
         color: white;
-
-        //&:hover {
-            //color: white;
-            //color: transparent;
-            //-webkit-text-stroke: .5px modules.$white;
-            //-webkit-font-smoothing: antialiased;
-        //}
     }
 
     .container__left-column {
+        position: relative;
         border-left: none;
     }
 }
@@ -98,6 +86,50 @@
     animation-fill-mode: forwards;
 }
 
+@media screen and (max-width: 992px) {
+
+    .nav {
+
+        &__container-right-column { 
+            display: none; 
+        }
+
+        &__container-left-column {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 20px;
+            border-left: 2px solid modules.$lightgrey !important;
+            border-right: 2px solid modules.$lightgrey;
+        }
+
+        &__logo img {
+            transform: unset;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px;
+        }
+
+        &__list {
+            height: initial;
+            border: none;
+        }
+
+        &__item {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav__logo img { width: 70px; }
+}
+
+/* HEADER */
 .header {
     width: 100%;
     height: 100vh;
