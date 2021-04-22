@@ -38,10 +38,7 @@ let navListFade = () => {
         : navList.classList.add("navfade");
 }
 
-// Detect device
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    cursor.style.display = "none";
-}
-
-let is_safari = navigator.userAgent.indexOf("Safari") > -1;
-if (is_safari) { cursor.style.display = "none"; }
+// Scroll effect
+//window.onscroll = function() {
+//    document.querySelector(".header__decor-circle").style.transform = "rotate(-360deg)";
+//};

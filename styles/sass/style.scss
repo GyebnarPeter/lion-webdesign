@@ -12,7 +12,7 @@
     top: 50px;
     right: 5%;
     cursor: pointer;
-    z-index: 30;
+    z-index: 3000;
 
     &__line {
         width: 100%;
@@ -32,10 +32,11 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgb(87,86,86);
-    background: linear-gradient(148deg, rgba(87,86,86,1) 0%, rgba(59,59,62,1) 4%, rgba(45,45,50,1) 9%, rgba(26,26,26,1) 20%, rgba(26,26,26,1) 100%);
+    background: modules.$gray;
+    background: linear-gradient(241deg, rgba(87,86,86,1) 0%, rgba(59,59,62,1) 4%, rgba(45,45,50,1) 9%, rgba(26,26,26,1) 20%, rgba(26,26,26,1) 100%);
     transition: 1s;
     overflow: hidden;
+    z-index: 500;
 
     &__logo {
         img {
@@ -50,7 +51,7 @@
         display: flex;
         flex-direction: column;
         padding: 0 50px;
-        border-left: 2px solid modules.$lightgrey;
+        border-left: 2px solid modules.$lightgray;
         opacity: 0;
     }
 
@@ -62,7 +63,7 @@
         letter-spacing: 2px;
         display: block;
         transition: .5s;
-        color: white;
+        color: modules.$white;
     }
 
     .container__left-column {
@@ -102,8 +103,8 @@
             align-items: center;
             flex-direction: column;
             margin: 0 20px;
-            border-left: 2px solid modules.$lightgrey !important;
-            border-right: 2px solid modules.$lightgrey;
+            border-left: 2px solid modules.$lightgray !important;
+            border-right: 2px solid modules.$lightgray;
         }
 
         &__logo img {
@@ -131,11 +132,128 @@
 
 /* HEADER */
 .header {
+    position: relative;
     width: 100%;
-    height: 100vh;
     background: modules.$gray;
+    background: linear-gradient(148deg, rgba(87,86,86,1) 0%, rgba(59,59,62,1) 4%, rgba(45,45,50,1) 9%, rgba(26,26,26,1) 20%, rgba(26,26,26,1) 100%);
 
-    img {
-        width: 200px;
+    &__container {
+        min-height: 100vh;
     }
+
+    &__container-left-column {
+        border-left: none;
+    }
+    
+    &__left-column-content {
+        padding: 0 50px;
+        border-left: 2px solid modules.$lightgray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    &__title {
+
+        h1 {
+            text-transform: uppercase;
+            font-family: modules.$title-font;
+            font-weight: 300;
+            font-size: 2.5em;
+            letter-spacing: 3px;
+            line-height: 1.2;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 200px;
+            height: 2px;
+            margin: 30px 0;
+            background: modules.$red;
+            display: block;
+        }
+    }
+
+    &__text {
+        font-weight: 200;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        margin-bottom: 50px;
+    }
+
+    .button {
+        @include modules.button();
+    }
+
+    &__container-right-column {
+        position: relative;
+        padding: 150px 0;
+    }
+
+    &__decor-text {
+        display: flex;
+        align-items: center;
+        padding: 200px 0 300px 0;
+
+        p {
+            font-size: 12vw;
+            text-align: right;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: 10px;
+            font-weight: 900;
+            transform: rotate(-90deg);
+            color: transparent;
+            -webkit-text-stroke: 1.5px modules.$white;
+            -webkit-font-smoothing: antialiased;
+            user-select: none;
+        }
+    }
+
+    &__decor-shape {
+        position: absolute;
+        top: 0;
+        left: -10%;
+    }
+
+    &__decor-circle {
+        position: absolute;
+        bottom: 100px;
+        left: -30%;
+
+        img {
+            width: 400px;
+        }
+    }
+
+    @keyframes circulation {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+    }
+
+    .circulation {
+        animation-name: circulation;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+main {
+    height: 1000px;
+    background: modules.$red;
 }
