@@ -18,15 +18,16 @@
 </head>
 <body>
     <div class="cursor"></div>
+    <!-- <main class="content"> -->
     <?php include "./includes/nav.php" ?>
 
     <header class="header">
         <div class="header__container container">
             <div class="header__container-left-column container__left-column">
+                <div class="header__logo hover-effect">
+                    <img src="./img/logo-white.png" alt="logo">
+                </div>
                 <div class="header__left-column-content">
-                    <div class="header__logo hover-effect">
-                        <img src="./img/logo-white.png" alt="logo">
-                    </div>
                     <div class="header__title hover-effect">
                         <h1>we are<br><span>red</span>necks</h1>
                     </div>
@@ -46,10 +47,10 @@
                 </div>
             </div>
             <div class="header__container-right-column container__right-column">
-                <div class="header__decor-text">
+                <div class="header__decor-text decor-text">
                     <p>web<br>studio</p>
                 </div>
-                <div class="header__decor-circle circulation">
+                <div class="header__decor-circle">
                     <img src="./img/decor-circle.png" alt="circle">
                 </div>
                 <div class="header__decor-shape">
@@ -59,8 +60,73 @@
         </div>
     </header>
 
-    <main></main>
+    <section class="services">
+        <div class="services__container container">
+            <div class="services__container-left-column container__left-column">
+                <div class="services__info">
+                    <div class="services__info-header">
+                        <h2>web design</h2>
+                    </div>
+                    <div class="services__info-text">
+                        <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
+                    </div>
+                </div>
+                <div class="services__info">
+                    <div class="services__info-header">
+                        <h2>website development</h2>
+                    </div>
+                    <div class="services__info-text">
+                        <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
+                    </div>
+                </div>
+                <div class="services__info">
+                    <div class="services__info-header">
+                        <h2>branding</h2>
+                    </div>
+                    <div class="services__info-text">
+                        <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
+                    </div>
+                </div>
+                <div class="services__info">
+                    <div class="services__info-header">
+                        <h2>barley harvesting</h2>
+                    </div>
+                    <div class="services__info-text">
+                        <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
+                    </div>
+                </div>
+                <a href="#" class="header__button button hover-effect">
+                    <div class="button__line"></div>
+                    <div class="button__container">
+                        <div class="button__text">view projects</div>
+                        <div class="button__text">view projects</div>
+                    </div>
+                </a>
+            </div>
+            <div class="services__container-right-column container__right-column">
+                <div class="services__decor-text decor-text">
+                    <p>our<br>services</p>
+                </div>
+                <div class="services__decor-shape">
+                    <img class="levitation" src="./img/shape2.png" alt="shape">
+                </div>
+            </div>
+        </div>
+    </section>
+
     
-    <script src="./js/script.js"></script>
+
+    <!-- </main> -->
+
+    <!--
+    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="js/scroll.js"></script>
+    -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -38,7 +38,22 @@ let navListFade = () => {
         : navList.classList.add("navfade");
 }
 
-// Scroll effect
-//window.onscroll = function() {
-//    document.querySelector(".header__decor-circle").style.transform = "rotate(-360deg)";
-//};
+
+// Scroll effects
+let serviceInfoHeader = document.querySelectorAll(".services__info-header h2");
+let serviceInfoText = document.querySelectorAll(".services__info-text p");
+
+$(window).scroll(function() {
+
+    // Header circle rotation
+    let theta = $(window).scrollTop() / 500 % Math.PI;
+    $('.header__decor-circle img').css({ transform: `rotate(-${theta}rad)` });
+
+    // Services fade effect
+    for(let i = 0; i < serviceInfoHeader.length; i++) {
+        if(document.documentElement.scrollTop > serviceInfoHeader[i].offsetTop - ($(window).height() - 200)) {
+            serviceInfoHeader[i].classList.add("fade-services");
+            serviceInfoText[i].classList.add("fade-services");
+        }
+    }
+});
