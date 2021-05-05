@@ -51,7 +51,7 @@ $(window).scroll(function() {
 
     // Services fade effect
     for(let i = 0; i < serviceInfoHeader.length; i++) {
-        if(document.documentElement.scrollTop > serviceInfoHeader[i].offsetTop - ($(window).height() - 200)) {
+        if(document.documentElement.scrollTop > serviceInfoHeader[i].offsetTop + ($(window).height() / 2)) {
             serviceInfoHeader[i].classList.add("fade-services");
             serviceInfoText[i].classList.add("fade-services");
         }

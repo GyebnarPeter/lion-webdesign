@@ -63,7 +63,7 @@
     <section class="services">
         <div class="services__container container">
             <div class="services__container-left-column container__left-column">
-                <div class="services__info">
+                <div class="services__info hover-effect">
                     <div class="services__info-header">
                         <h2>web design</h2>
                     </div>
@@ -71,7 +71,7 @@
                         <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
                     </div>
                 </div>
-                <div class="services__info">
+                <div class="services__info hover-effect">
                     <div class="services__info-header">
                         <h2>website development</h2>
                     </div>
@@ -79,7 +79,7 @@
                         <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
                     </div>
                 </div>
-                <div class="services__info">
+                <div class="services__info hover-effect">
                     <div class="services__info-header">
                         <h2>branding</h2>
                     </div>
@@ -87,7 +87,7 @@
                         <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
                     </div>
                 </div>
-                <div class="services__info">
+                <div class="services__info hover-effect">
                     <div class="services__info-header">
                         <h2>barley harvesting</h2>
                     </div>
@@ -95,7 +95,7 @@
                         <p>If you don't have the prettiest girl in the village, why the heck do you bother having a girl? No, seriously, it's all in the looks. We know a pretty website when we see one.</p>
                     </div>
                 </div>
-                <a href="#" class="header__button button hover-effect">
+                <a href="#" class="services__button button hover-effect">
                     <div class="button__line"></div>
                     <div class="button__container">
                         <div class="button__text">view projects</div>
@@ -114,7 +114,37 @@
         </div>
     </section>
 
-    
+    <section class="our-works">
+        <div class="our-works__container container">
+            <div class="our-works__container-left-column container__left-column">
+                <div class="our-works__decor-text decor-text">
+                    <p>our<br>projects</p>
+                </div>
+                <div class="our-works__decor-shape">
+                    <img class="levitation" src="./img/shape3.png" alt="shape">
+                </div>
+            </div>
+            <div class="our-works__container-right-column container__right-column">
+                <div class="our-works__work our-works__work-1">
+                    <img src="./img/work-1.webp" alt="work">
+                    <h3>zenns's foto</h3>
+                </div>
+                <div class="our-works__work our-works__work-2">
+                    <img src="./img/work-2.webp" alt="work">
+                    <h3>lavergne group</h3>
+                </div>
+                <a href="#" class="our-works__button button hover-effect">
+                    <div class="button__line"></div>
+                    <div class="button__container">
+                        <div class="button__text">view projects</div>
+                        <div class="button__text">view projects</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <?php include "./includes/footer.php" ?>
 
     <!-- </main> -->
 

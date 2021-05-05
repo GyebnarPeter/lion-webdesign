@@ -89,6 +89,7 @@ body::-webkit-scrollbar-thumb {
         border-width: 0 2px;
         border-color: colors.$lightgray;
         border-style: solid;
+        position: relative;
     }
     
     &__right-column {
@@ -98,6 +99,7 @@ body::-webkit-scrollbar-thumb {
         border-width: 0 2px;
         border-color: colors.$lightgray;
         border-style: solid;
+        position: relative;
     }
 }
 
@@ -197,7 +199,9 @@ body::-webkit-scrollbar-thumb {
 .decor-text {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 200px 0 300px 0;
+    transition: 1s;
 
     p {
         font-size: 10vw;
