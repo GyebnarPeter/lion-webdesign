@@ -37,7 +37,7 @@
                         We're developers as fine as a smooth Tennessee whiskey.<br>
                         Except we’re actually into cold hard beer.</p>
                     </div>
-                    <a href="#" class="header__button button hover-effect">
+                    <a href="project.php" class="header__button button hover-effect">
                         <div class="button__line"></div>
                         <div class="button__container">
                             <div class="button__text">view projects</div>
@@ -125,11 +125,11 @@
                 </div>
             </div>
             <div class="our-works__container-right-column container__right-column">
-                <div class="our-works__work our-works__work-1">
+                <div class="our-works__work our-works__work-1 hover-effect">
                     <img src="./img/work-1.webp" alt="work">
                     <h3>zenns's foto</h3>
                 </div>
-                <div class="our-works__work our-works__work-2">
+                <div class="our-works__work our-works__work-2 hover-effect">
                     <img src="./img/work-2.webp" alt="work">
                     <h3>lavergne group</h3>
                 </div>

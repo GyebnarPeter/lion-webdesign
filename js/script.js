@@ -43,6 +43,15 @@ let navListFade = () => {
 let serviceInfoHeader = document.querySelectorAll(".services__info-header h2");
 let serviceInfoText = document.querySelectorAll(".services__info-text p");
 
+function serviceFadeEffect(division) {
+    for(let i = 0; i < serviceInfoHeader.length; i++) {
+        if(document.documentElement.scrollTop > serviceInfoHeader[i].offsetTop + ($(window).height() / division )) {
+            serviceInfoHeader[i].classList.add("fade-services");
+            serviceInfoText[i].classList.add("fade-services");
+        }
+    }
+}
+
 $(window).scroll(function() {
 
     // Header circle rotation
@@ -50,10 +59,10 @@ $(window).scroll(function() {
     $('.header__decor-circle img').css({ transform: `rotate(-${theta}rad)` });
 
     // Services fade effect
-    for(let i = 0; i < serviceInfoHeader.length; i++) {
-        if(document.documentElement.scrollTop > serviceInfoHeader[i].offsetTop + ($(window).height() / 2)) {
-            serviceInfoHeader[i].classList.add("fade-services");
-            serviceInfoText[i].classList.add("fade-services");
-        }
+    if(window.innerWidth < 768) {
+        serviceFadeEffect(0.4);
+    }
+    if(window.innerWidth > 768) {
+        serviceFadeEffect(2);
     }
 });

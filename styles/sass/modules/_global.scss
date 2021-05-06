@@ -11,6 +11,7 @@ body {
     font-family: fonts.$basic-font;
     font-weight: 300;
     color: colors.$white;
+    background: colors.$gray;
     /*
     width: 100%;
     height: 100%;
@@ -119,7 +120,8 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and(max-width: 768px) {
 
-    .container{
+    .container {
+        flex-direction: column;
 
         &__left-column {
             border: none;
@@ -127,7 +129,7 @@ body::-webkit-scrollbar-thumb {
         }
 
         &__right-column {
-            display: none !important;
+            width: 100%;
         }
     }
 }
