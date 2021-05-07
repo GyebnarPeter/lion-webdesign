@@ -463,10 +463,8 @@ body::-webkit-scrollbar-thumb {
 }
 .services__container-left-column {
   padding: 100px 50px;
-  border-color: #1a1a1a;
 }
 .services__container-right-column {
-  border-color: #1a1a1a;
   position: relative;
   padding: 20vh 0 10vh 0;
 }
@@ -1073,6 +1071,102 @@ body::-webkit-scrollbar-thumb {
     transform: translate(0);
     margin: 0;
   }
+}
+/* SERVICE SUBPAGE */
+.service-subpage-content {
+  background: #0a0a0a;
+}
+.service-subpage-content__container {
+  height: 800px;
+}
+
+.service-subpage-contact {
+  background: #ff4142;
+}
+.service-subpage-contact__container {
+  height: 500px;
+}
+
+/* CONTACT */
+.contact__container-left-column {
+  padding: 0 50px;
+}
+.contact__container-right-column {
+  padding: 0 50px;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.contact__container-right-column h2 {
+  font-family: "Josefin Sans", sans-serif;
+}
+.contact__container-right-column h2 span {
+  font-weight: 200;
+  color: #ff4142;
+}
+.contact__container-right-column h2 span::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: #ff4142;
+  display: block;
+  margin: 20px 0;
+}
+.contact__container-right-column p {
+  width: 75%;
+  margin-bottom: 50px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+.contact__details {
+  line-height: 2;
+  letter-spacing: 1px;
+}
+.contact__details h1 {
+  font-size: 2em;
+  font-family: "Josefin Sans", sans-serif;
+}
+.contact__details h1 span {
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #ff4142;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form input, .contact__form textarea {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #313131;
+  margin: 15px 0;
+  padding: 10px;
+  background: #1a1a1a;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+.contact__form input[type=submit] {
+  background: #313131;
+  width: 120px;
+  color: white;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.contact__form textarea {
+  font-size: 16px;
+}
+.contact__social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 2;
+  margin-top: 50px;
+}
+.contact__social a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.contact__map {
+  border: 5px solid #1a1a1a;
 }
 
 /*# sourceMappingURL=style.css.map */

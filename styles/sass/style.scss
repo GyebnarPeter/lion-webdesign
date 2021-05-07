@@ -319,11 +319,9 @@
 
     &__container-left-column {
         padding: 100px 50px;
-        border-color: modules.$gray;
     }
 
     &__container-right-column {
-        border-color: modules.$gray;
         position: relative;
         padding: 20vh 0 10vh 0;
     }
@@ -934,5 +932,122 @@
                 margin: 0;
             }
         }
+    }
+}
+
+/* SERVICE SUBPAGE */
+.service-subpage-content {
+    background: modules.$darkgray;
+    
+    &__container {
+        height: 800px;
+    }
+}
+
+.service-subpage-contact {
+    background: modules.$red;
+    
+    &__container {
+        height: 500px;
+    }
+}
+
+/* CONTACT */
+.contact {
+
+    &__container-left-column {
+        padding: 0 50px;
+    }
+
+    &__container-right-column {
+        padding: 0 50px;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        h2 {
+            font-family: modules.$title-font;
+
+            span {
+                font-weight: 200;
+                color: modules.$red;
+
+                &::after {
+                    content: "";
+                    width: 60px;
+                    height: 1px;
+                    background: modules.$red;
+                    display: block;
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        p {
+            width: 75%;
+            margin-bottom: 50px;
+            line-height: 2;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__details {
+        line-height: 2;
+        letter-spacing: 1px;
+
+        h1 {
+            font-size: 2em;
+            font-family: modules.$title-font;
+
+            span {
+                text-transform: uppercase;
+                font-weight: 200;
+                color: modules.$red;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        input, textarea {
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: modules.$lightgray;
+            margin: 15px 0;
+            padding: 10px;
+            background: modules.$gray;
+            color: modules.$white;
+            letter-spacing: 1.5px;
+        }
+
+        input[type=submit] {
+            background: modules.$lightgray;
+            width: 120px;
+            color: white;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+        }
+
+        textarea {
+            font-size: 16px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        line-height: 2;
+        margin-top: 50px;
+
+        a {
+            text-decoration: none;
+            color: modules.$white;
+        }
+    }
+
+    &__map {
+        border: 5px solid modules.$gray;
     }
 }

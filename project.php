@@ -20,12 +20,11 @@
     <div class="cursor"></div>
     <?php include "./includes/nav.php" ?>
 
-
     <header class="project-header">
         <div class="project-header__container container">
             <div class="project-header__container-left-column container__left-column">
                 <div class="project-header__logo hover-effect">
-                    <img src="./img/logo-white.png" alt="logo">
+                    <a href="index.php"><img src="./img/logo-white.png" alt="logo"></a>
                 </div>
                 <div class="project-header__left-column-content">
                     <div class="project-header__main-image hover-effect">

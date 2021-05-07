@@ -25,7 +25,7 @@
         <div class="header__container container">
             <div class="header__container-left-column container__left-column">
                 <div class="header__logo hover-effect">
-                    <img src="./img/logo-white.png" alt="logo">
+                    <a href="index.php"><img src="./img/logo-white.png" alt="logo"></a>
                 </div>
                 <div class="header__left-column-content">
                     <div class="header__title hover-effect">

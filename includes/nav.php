@@ -12,10 +12,10 @@
             </div>
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a class="nav__link hover-effect" href="#">Kezdőlap</a>
+                    <a class="nav__link hover-effect" href="index.php">Kezdőlap</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link hover-effect" href="#">Weboldalkészítés</a>
+                    <a class="nav__link hover-effect" href="subpage.php">Weboldalkészítés</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link hover-effect" href="#">Webáruházkészítés</a>
@@ -33,7 +33,7 @@
                     <a class="nav__link hover-effect" href="#">Blog</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link hover-effect" href="#">Kapcsolat</a>
+                    <a class="nav__link hover-effect" href="kapcsolat.php">Kapcsolat</a>
                 </li>
             </ul>
         </div>
