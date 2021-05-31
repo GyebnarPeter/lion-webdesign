@@ -7,62 +7,28 @@ const editCursor = e => {
 };
 window.addEventListener("mousemove", editCursor);
 
-// Cursor hover effect
-const hoverEffectItems = document.querySelectorAll(".hover-effect");
-
-hoverEffectItems.forEach(e => e.addEventListener("mouseover", () => {
-    cursor.classList.add("cursor-hover");
-}));
-
-hoverEffectItems.forEach(e => e.addEventListener("mouseout", () => {
-    cursor.classList.remove("cursor-hover");
-}));
-
-
 // Navigation
 const navBtn = document.querySelector(".nav-btn");
 const nav = document.querySelector(".nav");
 const navList = document.querySelector(".nav__list");
 
-navBtn.onclick = () => {
-    nav.classList.contains("nav-toggle")
-        ? nav.classList.remove("nav-toggle")
-        : nav.classList.add("nav-toggle");
-        
-    setTimeout(navListFade, 1000);
-}
 
 let navListFade = () => {
     navList.classList.contains("navfade")
-        ? navList.classList.remove("navfade")
-        : navList.classList.add("navfade");
+    ? navList.classList.remove("navfade")
+    : navList.classList.add("navfade");
 }
 
-
-// Scroll effects
-let serviceInfoHeader = document.querySelectorAll(".services__info-header h2");
-let serviceInfoText = document.querySelectorAll(".services__info-text p");
-
-function serviceFadeEffect(division) {
-    for(let i = 0; i < serviceInfoHeader.length; i++) {
-        if(document.documentElement.scrollTop > serviceInfoHeader[i].offsetTop + ($(window).height() / division )) {
-            serviceInfoHeader[i].classList.add("fade-services");
-            serviceInfoText[i].classList.add("fade-services");
-        }
-    }
+let navToggle = () => {
+    nav.classList.contains("nav-toggle")
+    ? nav.classList.remove("nav-toggle")
+    : nav.classList.add("nav-toggle");
+    setTimeout(navListFade, 1000);
 }
 
-$(window).scroll(function() {
+navBtn.onclick = () => navToggle();
 
-    // Header circle rotation
-    let theta = $(window).scrollTop() / 500 % Math.PI;
-    $('.header__decor-circle img').css({ transform: `rotate(-${theta}rad)` });
+// Close the menu bar if click any link
+const navLinks = document.querySelectorAll(".nav__link");
+navLinks.forEach(link => link.onclick = () => navToggle() );
 
-    // Services fade effect
-    if(window.innerWidth < 768) {
-        serviceFadeEffect(0.4);
-    }
-    if(window.innerWidth > 768) {
-        serviceFadeEffect(2);
-    }
-});

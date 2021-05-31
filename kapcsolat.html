@@ -18,13 +18,60 @@
 </head>
 <body>
     <div class="cursor"></div>
-    <?php include "./includes/nav.php" ?>
+
+    <div class="nav-btn hover-effect">
+        <span class="nav-btn__line"></span>
+        <span class="nav-btn__line"></span>
+        <span class="nav-btn__line"></span>
+    </div>
+
+    <nav class="nav">
+        <div class="nav__container container">
+            <div class="nav__container-left-column container__left-column">
+                <div class="nav__logo hover-effect">
+                    <a href="index.html"><img src="./img/logo-white.png" alt="logo"></a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="index.html">Kezdőlap</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="subpage.html">Weboldalkészítés</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Webáruházkészítés</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Kreatív szövegírás</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Nyomdai szolgáltatások</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Referenciák</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="kapcsolat.html">Kapcsolat</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__container-right-column container__right-column">
+                <img class="levitation" src="./img/shape.webp" alt="shape">
+            </div>
+        </div>
+    </nav>
+
+    <div id="my-scrollbar">
+    <div id="swup" class="transition-fade">
 
     <header class="header">
         <div class="header__container container">
             <div class="header__container-left-column container__left-column">
                 <div class="header__logo hover-effect">
-                    <a href="index.php"><img src="./img/logo-white.png" alt="logo"></a>
+                    <a href="index.html"><img src="./img/logo-white.png" alt="logo"></a>
                 </div>
                 <div class="header__left-column-content">
                     <div class="header__title hover-effect">
@@ -36,7 +83,7 @@
                         We're developers as fine as a smooth Tennessee whiskey.<br>
                         Except we’re actually into cold hard beer.</p>
                     </div>
-                    <a href="project.php" class="header__button button hover-effect">
+                    <a href="project.html" class="header__button button hover-effect">
                         <div class="button__line"></div>
                         <div class="button__container">
                             <div class="button__text">view projects</div>
@@ -89,10 +136,36 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.984415753076!2d20.148271422023832!3d46.26190536512172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4744871edc1ac69b%3A0xf868651876563a66!2sLion%20Webdesign!5e0!3m2!1shu!2shu!4v1620312255458!5m2!1shu!2shu" width="100%" height="450" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </main>
+    </div>
+    </div>
 
-    <!-- <?php include "./includes/footer.php" ?> -->
+    <!-- <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__container-left-column container__left-column">
+                <div class="footer__contact hover-effect">
+                    <h3><span>Lion </span>Webdesign</h3>
+                    <p>info@lionwebdesign.hu</p>
+                    <p>06 30 / 123-4567</p>
+                </div>
+            </div>
+            <div class="footer__container-right-column container__right-column">
+                <div class="footer__address hover-effect">
+                    <h3>Iroda</h3>
+                    <p>Brüsszeli körút 28 / A</p>
+                    <p>Szeged</p>
+                    <p>6729</p>
+                </div>
+                <div class="footer__social hover-effect">
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                </div>
+            </div>
+        </div>
+    <footer> -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="/scroll-animation.js"></script>
+    <!-- <script src="index.js"></script> -->
 </body>
 </html>

@@ -10,35 +10,17 @@ body {
   font-weight: 300;
   color: #ffffff;
   background: #1a1a1a;
-  /*
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  */
+  overflow: auto;
 }
 
-/*
-main {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-*/
-/*
-body::-webkit-scrollbar {
-    width: 10px;
+#my-scrollbar {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
-body::-webkit-scrollbar-track {
-    background: white;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: colors.$red;
-    border-radius: 20px;
-    border: 2px solid white;
-}
-*/
 .cursor {
   position: fixed;
   padding: 1rem;
@@ -60,9 +42,6 @@ body::-webkit-scrollbar-thumb {
   transform: scale(2);
 }
 
-/* .hover-effect {
-    mix-blend-mode: difference;
-} */
 @keyframes levitation {
   0% {
     transform: translateY(0);
@@ -78,6 +57,21 @@ body::-webkit-scrollbar-thumb {
   animation-name: levitation;
   animation-duration: 12s;
   animation-iteration-count: infinite;
+}
+
+@keyframes circulation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circulation {
+  animation-name: circulation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .container {
@@ -143,6 +137,36 @@ body::-webkit-scrollbar-thumb {
   -webkit-text-stroke: 1.5px #ffffff;
   -webkit-font-smoothing: antialiased;
   user-select: none;
+}
+
+.transition-fade {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightseagreen;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: left;
+}
+
+.transition-wipe {
+  transition: 0.7s cubic-bezier(0, 0, 0.58, 1);
+  transform: scaleX(0);
+}
+
+html.is-animating .transition-wipe {
+  transform: scaleX(1);
 }
 
 /* NAVIGATION */
@@ -394,13 +418,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1700px) {
-  .header__logo {
-    height: 200px;
-  }
   .header__logo img {
     transform: translateX(0);
     margin-left: 50px;
-    width: 100px;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -455,6 +475,13 @@ body::-webkit-scrollbar-thumb {
   }
   .header__decor-text p {
     font-size: 30vw;
+  }
+
+  .header__logo {
+    height: 200px;
+  }
+  .header__logo img {
+    width: 100px;
   }
 }
 /* SERVICES */
@@ -913,20 +940,6 @@ body::-webkit-scrollbar-thumb {
   text-transform: uppercase;
   font-size: 1em;
   padding-bottom: 50px;
-}
-@keyframes circulation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.project-header .circulation {
-  animation-name: circulation;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
 .project-main__container-left-column {

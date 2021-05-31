@@ -18,13 +18,60 @@
 </head>
 <body>
     <div class="cursor"></div>
-    <?php include "./includes/nav.php" ?>
+    
+    <div class="nav-btn hover-effect">
+        <span class="nav-btn__line"></span>
+        <span class="nav-btn__line"></span>
+        <span class="nav-btn__line"></span>
+    </div>
+
+    <nav class="nav">
+        <div class="nav__container container">
+            <div class="nav__container-left-column container__left-column">
+                <div class="nav__logo hover-effect">
+                    <a href="/index.html"><img src="./img/logo-white.png" alt="logo"></a>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="index.html">Kezdőlap</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="subpage.html">Weboldalkészítés</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Webáruházkészítés</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Kreatív szövegírás</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Nyomdai szolgáltatások</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Referenciák</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="#">Blog</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link hover-effect" href="kapcsolat.html">Kapcsolat</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav__container-right-column container__right-column">
+                <img class="levitation" src="./img/shape.webp" alt="shape">
+            </div>
+        </div>
+    </nav>
+
+    <div id="my-scrollbar">
+    <div id="swup" class="transition-fade">
 
     <header class="project-header">
         <div class="project-header__container container">
             <div class="project-header__container-left-column container__left-column">
                 <div class="project-header__logo hover-effect">
-                    <a href="index.php"><img src="./img/logo-white.png" alt="logo"></a>
+                    <a href="/index.html"><img src="./img/logo-white.png" alt="logo"></a>
                 </div>
                 <div class="project-header__left-column-content">
                     <div class="project-header__main-image hover-effect">
@@ -64,11 +111,35 @@
             </div>
         </div>
     </main>
-    
 
-    <?php include "./includes/footer.php" ?>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__container-left-column container__left-column">
+                <div class="footer__contact hover-effect">
+                    <h3><span>Lion </span>Webdesign</h3>
+                    <p>info@lionwebdesign.hu</p>
+                    <p>06 30 / 123-4567</p>
+                </div>
+            </div>
+            <div class="footer__container-right-column container__right-column">
+                <div class="footer__address hover-effect">
+                    <h3>Iroda</h3>
+                    <p>Brüsszeli körút 28 / A</p>
+                    <p>Szeged</p>
+                    <p>6729</p>
+                </div>
+                <div class="footer__social hover-effect">
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>

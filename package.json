@@ -1,0 +1,26 @@
+{
+  "name": "lion-webdesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GyebnarPeter/lion-webdesign.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GyebnarPeter/lion-webdesign/issues"
+  },
+  "homepage": "https://github.com/GyebnarPeter/lion-webdesign#readme",
+  "dependencies": {
+    "@swup/scripts-plugin": "^1.1.0",
+    "@swup/scroll-plugin": "^1.1.0",
+    "smooth-scrollbar": "^8.6.2",
+    "swup": "^2.0.14"
+  }
+}

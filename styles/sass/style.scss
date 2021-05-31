@@ -229,12 +229,10 @@
 @media screen and (max-width: 1700px) {
 
     .header__logo {
-        height: 200px;
 
         img {
             transform: translateX(0);
             margin-left: 50px;
-            width: 100px;
         }
     }
 }
@@ -309,6 +307,14 @@
 
         &__decor-text p {
             font-size: 30vw;
+        }
+    }
+
+    .header__logo {
+        height: 200px;
+
+        img {
+            width: 100px;
         }
     }
 }
@@ -768,18 +774,6 @@
             font-size: 1em;
             padding-bottom: 50px;
         }
-    }
-
-    @keyframes circulation {
-        from { transform: rotate(0deg); }
-        to   { transform: rotate(360deg); }
-    }
-
-    .circulation {
-        animation-name: circulation;
-        animation-duration: 20s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
     }
 }
 
