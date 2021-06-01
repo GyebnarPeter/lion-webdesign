@@ -31,4 +31,3 @@ navBtn.onclick = () => navToggle();
 // Close the menu bar if click any link
 const navLinks = document.querySelectorAll(".nav__link");
 navLinks.forEach(link => link.onclick = () => navToggle() );
-

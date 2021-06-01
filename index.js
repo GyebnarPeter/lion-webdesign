@@ -27,7 +27,7 @@ function mainPageScrollEffects() {
 
             // Services fade effect
             if(window.innerWidth < 768) {
-                serviceFadeEffect(0.4);
+                serviceFadeEffect(0.6);
             }
             if(window.innerWidth > 768) {
                 serviceFadeEffect(2);
@@ -38,6 +38,7 @@ function mainPageScrollEffects() {
 mainPageScrollEffects();
 
 const swup = new Swup();
+
 swup.on('contentReplaced', mainPageScrollEffects);
 
 
@@ -60,4 +61,13 @@ cursorHover();
 swup.on('contentReplaced', cursorHover);
 
 
-
+// Reload the actual page, because the swup not scrolling the content to the top, when switching the page
+const scrollingContent = document.querySelector('#my-scrollbar');
+function reloadPage() {
+    scrollingContent.style.display = 'none';
+    setTimeout(function() {
+        scrollingContent.style.display = 'block'
+    }, 100);
+}
+reloadPage();
+swup.on('contentReplaced', reloadPage);
