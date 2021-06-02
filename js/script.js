@@ -10,7 +10,8 @@ window.addEventListener("mousemove", editCursor);
 // Navigation
 const navBtn = document.querySelector(".nav-btn");
 const nav = document.querySelector(".nav");
-const navList = document.querySelector(".nav__list");
+const navList = document.querySelector(".nav__container-left-column");
+const navLion = document.querySelector(".nav__container-right-column");
 
 
 let navListFade = () => {
@@ -19,14 +20,26 @@ let navListFade = () => {
     : navList.classList.add("navfade");
 }
 
+let navLionFade = () => {
+    navLion.classList.contains("navfade")
+    ? navLion.classList.remove("navfade")
+    : navLion.classList.add("navfade");
+}
+
 let navToggle = () => {
     nav.classList.contains("nav-toggle")
     ? nav.classList.remove("nav-toggle")
     : nav.classList.add("nav-toggle");
     setTimeout(navListFade, 1000);
+    setTimeout(navLionFade, 2000);
 }
 
-navBtn.onclick = () => navToggle();
+navBtn.onclick = () => {
+    navToggle();
+    navBtn.classList.contains("nav-btn-animation")
+    ? navBtn.classList.remove("nav-btn-animation")
+    : navBtn.classList.add("nav-btn-animation");
+};
 
 // Close the menu bar if click any link
 const navLinks = document.querySelectorAll(".nav__link");
