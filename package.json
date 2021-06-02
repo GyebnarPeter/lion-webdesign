@@ -22,5 +22,9 @@
     "@swup/scroll-plugin": "^1.1.0",
     "smooth-scrollbar": "^8.6.2",
     "swup": "^2.0.14"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.5",
+    "postcss": "^8.3.0"
   }
 }

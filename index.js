@@ -37,10 +37,6 @@ function mainPageScrollEffects() {
 }
 mainPageScrollEffects();
 
-const swup = new Swup();
-
-swup.on('contentReplaced', mainPageScrollEffects);
-
 
 // Cursor hover effect
 const cursor = document.querySelector(".cursor");
@@ -58,10 +54,10 @@ function cursorHover() {
     }
 }
 cursorHover();
-swup.on('contentReplaced', cursorHover);
 
 
 // Reload the actual page, because the swup not scrolling the content to the top, when switching the page
+// The swup own build-in function is not workink for me
 const scrollingContent = document.querySelector('#my-scrollbar');
 function reloadPage() {
     scrollingContent.style.display = 'none';
@@ -70,4 +66,9 @@ function reloadPage() {
     }, 100);
 }
 reloadPage();
+
+
+const swup = new Swup();
+swup.on('contentReplaced', mainPageScrollEffects);
+swup.on('contentReplaced', cursorHover);
 swup.on('contentReplaced', reloadPage);

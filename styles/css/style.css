@@ -205,6 +205,9 @@ html.is-animating .transition-wipe {
   overflow: hidden;
   z-index: 500;
 }
+.nav__container {
+  height: 100vh;
+}
 .nav__logo img {
   width: 200px;
   margin: 50px;
@@ -228,6 +231,14 @@ html.is-animating .transition-wipe {
   transition: 0.5s;
   color: #ffffff;
 }
+.nav__container-right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__container-right-column img {
+  height: 80vh;
+}
 .nav .container__left-column {
   position: relative;
   border-left: none;
@@ -235,6 +246,10 @@ html.is-animating .transition-wipe {
 
 .nav-toggle {
   top: 0;
+}
+
+.navigation-images {
+  display: none;
 }
 
 @keyframes navfade {
@@ -401,11 +416,11 @@ html.is-animating .transition-wipe {
 }
 .header__decor-shape {
   position: absolute;
-  top: 0;
-  left: -10%;
+  bottom: 0;
+  right: 200px;
 }
 .header__decor-shape img {
-  height: 1000px;
+  height: 800px;
 }
 .header__decor-circle {
   position: absolute;

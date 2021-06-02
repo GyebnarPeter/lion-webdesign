@@ -38,6 +38,10 @@
     overflow: hidden;
     z-index: 500;
 
+    &__container {
+        height: 100vh;
+    }
+
     &__logo {
         img {
             width: 200px;
@@ -66,6 +70,16 @@
         color: modules.$white;
     }
 
+    &__container-right-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 80vh;
+        }
+    }
+
     .container__left-column {
         position: relative;
         border-left: none;
@@ -74,6 +88,10 @@
 
 .nav-toggle {
     top: 0;
+}
+
+.navigation-images {
+    display: none;
 }
 
 @keyframes navfade {
@@ -206,11 +224,11 @@
 
     &__decor-shape {
         position: absolute;
-        top: 0;
-        left: -10%;
+        bottom: 0;
+        right: 200px;
         
         img {
-            height: 1000px;
+            height: 800px;
         }
     }
 

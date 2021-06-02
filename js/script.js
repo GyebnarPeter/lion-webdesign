@@ -31,3 +31,16 @@ navBtn.onclick = () => navToggle();
 // Close the menu bar if click any link
 const navLinks = document.querySelectorAll(".nav__link");
 navLinks.forEach(link => link.onclick = () => navToggle() );
+
+// Change the lion image if hover the mouse any link of nav
+// Sadly with function not working form me, because the parcel image building
+let navigationLion = document.querySelector("#nav-lion");
+
+navLinks[0].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-0.png"))
+navLinks[1].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-1.png"))
+navLinks[2].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-2.png"))
+navLinks[3].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-3.png"))
+navLinks[4].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-4.png"))
+navLinks[5].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-5.png"))
+navLinks[6].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-6.png"))
+navLinks[7].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-7.png"))
