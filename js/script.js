@@ -16,20 +16,20 @@ const navLion = document.querySelector(".nav__container-right-column");
 
 let navListFade = () => {
     navList.classList.contains("navfade")
-    ? navList.classList.remove("navfade")
-    : navList.classList.add("navfade");
+        ? navList.classList.remove("navfade")
+        : navList.classList.add("navfade");
 }
 
 let navLionFade = () => {
     navLion.classList.contains("navfade")
-    ? navLion.classList.remove("navfade")
-    : navLion.classList.add("navfade");
+        ? navLion.classList.remove("navfade")
+        : navLion.classList.add("navfade");
 }
 
 let navToggle = () => {
     nav.classList.contains("nav-toggle")
-    ? nav.classList.remove("nav-toggle")
-    : nav.classList.add("nav-toggle");
+        ? nav.classList.remove("nav-toggle")
+        : nav.classList.add("nav-toggle");
     setTimeout(navListFade, 1000);
     setTimeout(navLionFade, 2000);
 }
@@ -37,13 +37,20 @@ let navToggle = () => {
 navBtn.onclick = () => {
     navToggle();
     navBtn.classList.contains("nav-btn-animation")
-    ? navBtn.classList.remove("nav-btn-animation")
-    : navBtn.classList.add("nav-btn-animation");
+        ? navBtn.classList.remove("nav-btn-animation")
+        : navBtn.classList.add("nav-btn-animation");
 };
 
 // Close the menu bar if click any link
 const navLinks = document.querySelectorAll(".nav__link");
-navLinks.forEach(link => link.onclick = () => navToggle() );
+navLinks.forEach( link => {
+    link.onclick = () => {
+        navToggle();
+        navBtn.classList.contains("nav-btn-animation")
+            ? navBtn.classList.remove("nav-btn-animation")
+            : navBtn.classList.add("nav-btn-animation");
+    } 
+});
 
 // Change the lion image if hover the mouse any link of nav
 // Sadly with function not working form me, because the parcel image building
