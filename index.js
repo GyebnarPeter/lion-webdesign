@@ -3,7 +3,7 @@ Scrollbar.init(document.querySelector('#my-scrollbar'));
 
 // Home page scroll animations scripts
 function mainPageScrollEffects() {
-    if (document.querySelector('.services')) {
+    if (document.querySelector('.header')) {
 
         const serviceInfoHeader = document.querySelectorAll(".services__info-header h2");
         const serviceInfoText = document.querySelectorAll(".services__info-text p");
@@ -23,7 +23,7 @@ function mainPageScrollEffects() {
 
             // Header circle rotation
             let theta = status.offset.y / 500 % Math.PI;
-            headerCircle.style.transform = `rotate(-${theta}rad)`;
+            if(headerCircle) headerCircle.style.transform = `rotate(-${theta}rad)`;
 
             // Services fade effect
             if(window.innerWidth < 768) {
