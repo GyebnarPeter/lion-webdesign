@@ -30,7 +30,7 @@ body {
     border: 2px solid colors.$white;
     border-radius: 50%;
     mix-blend-mode: difference;
-    transition: .5s ease-out;
+    transition: .2s;
     pointer-events: none;
     z-index: 1000;
 }
@@ -119,6 +119,7 @@ body {
 
         &__right-column {
             width: 100%;
+            border: none;
         }
     }
 }

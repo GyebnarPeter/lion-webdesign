@@ -36,16 +36,16 @@
                         <a class="nav__link hover-effect" href="/index.html">Kezdőlap</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link hover-effect" href="/weboldal_keszites.html">Weboldalkészítés</a>
+                        <a class="nav__link hover-effect" href="/weboldal-keszites.html">Weboldal készítés</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link hover-effect" href="/webaruhaz_keszites.html">Webáruház készítés</a>
+                        <a class="nav__link hover-effect" href="/webaruhaz-keszites.html">Webáruház készítés</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link hover-effect" href="/kreativ_szovegiras.html">Kreatív szövegírás</a>
+                        <a class="nav__link hover-effect" href="/kreativ-szovegiras.html">Kreatív szövegírás</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link hover-effect" href="/subpage.html">Nyomdai szolgáltatások</a>
+                        <a class="nav__link hover-effect" href="/nyomdai-szolgaltatasok.html">Nyomdai szolgáltatások</a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link hover-effect" href="/subpage.html">Referenciák</a>
@@ -132,12 +132,12 @@
                 <p>Nem tudod, hogy mely online marketinges szolgáltatásunk lenne céged számára a legideálisabb? Szívesen meghallgatnád egy találkozó keretein belül a világmegváltó ötleteinket? Weboldal- és webáruház készítésen, grafikai munkákon, illetve tartalommarketingen felül több területen is otthonosan mozgunk – így a gazdasági piac jelentős százalékára magabiztos rálátásunk van. Objektíven, az adott megkeresés problémájára fókuszálunk – előre megtervezett stratégia mentén. Le akarod nyűgözni a várost? Oda akarsz pörkölni a konkurenciádnak? Mit szólnál, ha nem csak online vennéd fel a kesztyűt ebben a kereskedelmi párbajban?! Offline mankót is nyújtunk a komplexitást kedvelő ügyfeleinknek!</p>
             </div>
             <div class="subpage-contact__container-right-column container__right-column">
-                <form action="" method="" class="subpage-contact__form">
+                <form action="php/form.php" method="post" class="subpage-contact__form">
                     <input type="text" name="name" id="name" placeholder="Név">
                     <input type="email" name="email" id="email" placeholder="E-mail">
                     <input type="text" name="phone" id="phone" placeholder="Telefon">
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Üzenet"></textarea>
-                    <input type="submit" value="Küldés" class="hover-effect">
+                    <input type="submit" name="submit" value="Küldés" class="hover-effect">
                 </form>
             </div>
         </div>
@@ -172,6 +172,7 @@
     <div class="transition-wipe overlay"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script src="js/script.js"></script>
     <script src="index.js"></script>
 </body>

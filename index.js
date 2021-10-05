@@ -8,30 +8,26 @@ function mainPageScrollEffects() {
         const serviceInfoHeader = document.querySelectorAll(".services__info-header h2");
         const serviceInfoText = document.querySelectorAll(".services__info-text p");
         const headerCircle = document.querySelector(".header__decor-circle img");
+        const servicesButtons = document.querySelectorAll('.services .button');
 
         const scrollbar = Scrollbar.init($('#my-scrollbar')[0]);
         scrollbar.addListener(function (status) {
 
-            function serviceFadeEffect(division) {
+            function serviceFadeEffect() {
                 for(let i = 0; i < serviceInfoHeader.length; i++) {
-                    if(status.offset.y > serviceInfoHeader[i].offsetTop + ($(window).height() / division )) {
+                    if(serviceInfoHeader[i].getBoundingClientRect().y < (window.innerHeight / 1.5) ) {
                         serviceInfoHeader[i].classList.add("fade-services");
                         serviceInfoText[i].classList.add("fade-services");
+                        servicesButtons[i].style.opacity = '1';
                     }
                 }
             }
 
+            serviceFadeEffect();
+
             // Header circle rotation
             let theta = status.offset.y / 500 % Math.PI;
             if(headerCircle) headerCircle.style.transform = `rotate(-${theta}rad)`;
-
-            // Services fade effect
-            if(window.innerWidth < 768) {
-                serviceFadeEffect(0.6);
-            }
-            if(window.innerWidth > 768) {
-                serviceFadeEffect(2);
-            }
         })
     }
 }
@@ -67,8 +63,8 @@ function reloadPage() {
 }
 reloadPage();
 
-
 const swup = new Swup();
 swup.on('contentReplaced', mainPageScrollEffects);
 swup.on('contentReplaced', cursorHover);
 swup.on('contentReplaced', reloadPage);
+
