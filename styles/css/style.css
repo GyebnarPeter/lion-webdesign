@@ -23,13 +23,15 @@ body {
 
 .cursor {
   position: fixed;
-  padding: 1rem;
+  padding: 0.2rem;
   border: 2px solid #ffffff;
+  background: #ffffff;
   border-radius: 50%;
   mix-blend-mode: difference;
-  transition: 0.2s;
+  transition: 0.4s;
   pointer-events: none;
   z-index: 1000;
+  opacity: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -38,8 +40,9 @@ body {
   }
 }
 .cursor-hover {
+  opacity: 1;
   background: #ffffff;
-  transform: scale(2);
+  transform: scale(8);
 }
 
 @keyframes levitation {
@@ -154,7 +157,7 @@ html.is-animating .transition-fade {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #121531;
+  background: white;
   top: 0;
   left: 0;
   transform: scale(0);
@@ -184,6 +187,7 @@ html.is-animating .transition-wipe {
   cursor: pointer;
   z-index: 3000;
   transition: 1s;
+  mix-blend-mode: difference;
 }
 .nav-btn__line {
   width: 100%;
@@ -191,6 +195,7 @@ html.is-animating .transition-wipe {
   background: #ffffff;
   display: block;
   transition: 1s;
+  border-radius: 10px;
 }
 .nav-btn__line:last-child {
   width: 75%;
@@ -200,10 +205,10 @@ html.is-animating .transition-wipe {
   transition: 1s;
 }
 .nav-btn-animation .nav-btn__line:nth-child(1) {
-  transform: rotate(45deg) translateY(-15px) translateX(-5px);
+  transform: rotate(45deg) translateY(-13px) translateX(-5px);
 }
 .nav-btn-animation .nav-btn__line:nth-child(2) {
-  transform: rotate(-45deg) translateY(-15px) translateX(20px);
+  transform: rotate(-45deg) translateY(-13px) translateX(20px);
 }
 .nav-btn-animation .nav-btn__line:nth-child(3) {
   opacity: 0;
@@ -269,6 +274,9 @@ html.is-animating .transition-wipe {
 
 .nav__container-right-column {
   opacity: 0;
+}
+.nav__container-right-column img {
+  padding-top: 100px;
 }
 
 @keyframes navfade {
@@ -1194,8 +1202,10 @@ html.is-animating .transition-wipe {
 }
 /* SUBPAGE */
 .subpage-content {
-  background: #1a1a1a;
+  background: #ffffff;
+  color: #313131;
   letter-spacing: 1px;
+  font-size: 16px;
 }
 .subpage-content__container-left-column {
   padding: 50px;
@@ -1211,34 +1221,34 @@ html.is-animating .transition-wipe {
   margin-bottom: 30px;
 }
 .subpage-content h3 {
-  color: #ffff8f;
+  background: #313131;
+  color: #ffffff;
+  padding: 20px;
   font-weight: 400;
   margin-bottom: 25px;
 }
 .subpage-content h4 {
-  margin-bottom: 15px;
   font-weight: 500;
+  color: #0a0a0a;
 }
 .subpage-content p {
   line-height: 1.6;
   letter-spacing: 1px;
-  font-weight: 200;
-  font-size: 14px;
   margin: 10px 0 30px 0;
 }
 .subpage-content ul {
   padding-left: 20px;
   margin-bottom: 30px;
   font-size: 14px;
-  font-weight: 200;
   list-style: none;
+  font-size: 16px;
 }
 .subpage-content ul li {
   margin: 5px 0;
 }
 .subpage-content a {
   text-decoration: none;
-  color: #ffff8f;
+  color: #ffffff;
 }
 .subpage-content__lion {
   position: absolute;
@@ -1250,7 +1260,7 @@ html.is-animating .transition-wipe {
   border: 1px solid transparent;
 }
 .subpage-content .blog-home__article h2 a {
-  color: #ffff8f;
+  color: #ffffff;
 }
 .subpage-content .blog-home__article h2 a:hover {
   color: #ffffff;
@@ -1445,8 +1455,8 @@ html.is-animating .transition-wipe {
 }
 /* BLOG */
 .blog-home {
-  background: #e0e0e0;
-  color: #0a0a0a;
+  background: #ffffff;
+  color: #313131;
 }
 .blog-home__container-left-column {
   padding: 200px 50px;
@@ -1518,15 +1528,17 @@ html.is-animating .transition-wipe {
 .blog-home__article h2 {
   margin-bottom: 20px;
   line-height: 1.4;
+  background: #313131;
+  padding: 20px;
 }
 .blog-home__article a {
-  color: #0a0a0a;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   transition: 0.5s;
 }
 .blog-home__article a:hover {
-  color: #ff4142;
+  color: #ffff8f;
 }
 .blog-home__decor-text p {
   color: transparent;
@@ -1568,6 +1580,15 @@ html.is-animating .transition-wipe {
     padding: 30px;
   }
 }
+.blog-article {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+.blog-article h3 {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
 /* ABOUT us */
 .about-us__container-left-column {
   padding: 200px 50px;

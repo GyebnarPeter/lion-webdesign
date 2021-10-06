@@ -2,8 +2,8 @@
 const cursor = document.querySelector(".cursor");
 const editCursor = e => {
     const { clientX: x, clientY: y } = e;
-    cursor.style.left = (x - 12) + "px";
-    cursor.style.top = (y - 12) + "px";
+    cursor.style.left = (x - 5) + "px";
+    cursor.style.top = (y - 5) + "px";
 };
 window.addEventListener("mousemove", editCursor);
 
@@ -56,11 +56,11 @@ navLinks.forEach( link => {
 // Sadly with function not working form me, because the parcel image building
 let navigationLion = document.querySelector("#nav-lion");
 
-navLinks[0].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-0.png"))
-navLinks[1].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-1.png"))
-navLinks[2].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-2.png"))
-navLinks[3].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-3.png"))
-navLinks[4].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-4.png"))
-navLinks[5].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-5.png"))
-navLinks[6].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-6.png"))
-navLinks[7].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-7.png"))
+navLinks[0].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-0.webp"))
+navLinks[1].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-1.webp"))
+navLinks[2].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-2.webp"))
+navLinks[3].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-3.webp"))
+navLinks[4].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-4.webp"))
+navLinks[5].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-5.webp"))
+navLinks[6].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-6.webp"))
+navLinks[7].addEventListener("mouseover", () => navigationLion.src = require("../img/lion-7.webp"))
